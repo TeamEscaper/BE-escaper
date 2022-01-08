@@ -1,9 +1,0 @@
-
-spring:
-  profiles:
-    include: real-db
-
-  jpa:
-    properties:
-      hibernate:
-        dialect = org.dialect.MySQL5InnoDBDialect
