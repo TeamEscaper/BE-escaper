@@ -2,6 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '2.6.2'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
+	id 'org.siouan.frontend-jdk11' version '6.0.0'
 }
 
 group = 'com.roomescaper'
@@ -12,6 +13,12 @@ configurations {
 	compileOnly {
 		extendsFrom annotationProcessor
 	}
+}
+frontend {
+	nodeVersion = '16.13.1'
+	assembleScript = 'run build'
+	cleanScript = 'run clean'
+	checkScript = 'run check'
 }
 
 repositories {
